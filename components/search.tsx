@@ -1,14 +1,53 @@
-import { FC } from 'react';
-import { LayoutGrid, List } from 'lucide-react';
+'use client';
 
+import { ChangeEvent, FC } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { LayoutGrid, List } from 'lucide-react';
+import { useDebouncedCallback } from 'use-debounce';
+
+import { CONFIG } from '@/config/app';
 import { Input } from '@/components/ui/input';
 import { Toggle } from '@/components/ui/toggle';
 
+const { waitDebounceSearchInput } = CONFIG;
+
+const queryParam = 'query' as const;
+
 const Search: FC = () => {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
+    const term = event.target.value;
+    const params = new URLSearchParams(searchParams);
+
+    if (term) {
+      params.set(queryParam, term);
+    } else {
+      params.delete(queryParam);
+    }
+
+    replace(`${pathname}?${params.toString()}`);
+  };
+
+  const debouncedHandleSearch = useDebouncedCallback(
+    handleSearch,
+    waitDebounceSearchInput
+  );
+
+  const initialTerm = searchParams.get(queryParam)?.toString();
+
   return (
     <div className="flex items-center justify-between mb-6">
       <div className="relative w-full max-w-sm">
-        <Input className="pl-8" placeholder="Search..." type="search" />
+        <Input
+          onChange={debouncedHandleSearch}
+          defaultValue={initialTerm}
+          className="pl-8"
+          placeholder="Search..."
+          type="search"
+        />
         <svg
           className=" absolute left-2.5 top-2.5 size-4 text-muted-foreground"
           fill="none"

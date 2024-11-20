@@ -6,7 +6,16 @@ import { products } from '@/data/products';
 
 const { waitDatabase } = CONFIG;
 
-export const getProducts = (): Promise<Product[]> =>
-  wait(waitDatabase).then(() => products);
+export const searchProducts = async (query = ''): Promise<Product[]> => {
+  await wait(waitDatabase);
 
-// todo: search products
+  if (!query) return products;
+
+  const lowerCaseQuery = query.trim().toLowerCase();
+
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(lowerCaseQuery)
+  );
+
+  return filteredProducts;
+};

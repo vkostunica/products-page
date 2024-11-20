@@ -13,5 +13,6 @@ export const CONFIG = {
     github: 'https://github.com/shadcn/ui',
     docs: 'https://ui.shadcn.com',
   },
-  waitDatabase: 2000,
+  waitDatabase: 1000,
+  waitDebounceSearchInput: 300,
 } as const;

@@ -1,12 +1,25 @@
-import { FC } from 'react';
-import { getProducts } from '@/modules/database';
+import { FC, Suspense } from 'react';
 
-import ProductsView from '@/components/products-view';
+import ProductList from '@/components/product-list';
+import ProductListSkeleton from '@/components/product-list-skeleton';
+import Search from '@/components/search';
 
-const IndexPage: FC = async () => {
-  const products = await getProducts();
+export interface Props {
+  searchParams?: Promise<{ query?: string }>;
+}
 
-  return <ProductsView products={products} />;
+const IndexPage: FC<Props> = async (props) => {
+  const searchParams = await props.searchParams;
+  const query = searchParams?.query || '';
+
+  return (
+    <>
+      <Search />
+      <Suspense key={query} fallback={<ProductListSkeleton />}>
+        <ProductList query={query} />
+      </Suspense>
+    </>
+  );
 };
 
 export default IndexPage;
