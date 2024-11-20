@@ -2,7 +2,7 @@ import '@/styles/globals.css';
 
 import { Metadata } from 'next';
 
-import { siteConfig } from '@/config/site';
+import { CONFIG } from '@/config/app';
 import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
@@ -12,10 +12,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: CONFIG.name,
+    template: `%s - ${CONFIG.name}`,
   },
-  description: siteConfig.description,
+  description: CONFIG.description,
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',

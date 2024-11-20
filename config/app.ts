@@ -1,6 +1,4 @@
-export type SiteConfig = typeof siteConfig;
-
-export const siteConfig = {
+export const CONFIG = {
   name: 'Next.js',
   description:
     'Beautifully designed components built with Radix UI and Tailwind CSS.',
@@ -15,4 +13,5 @@ export const siteConfig = {
     github: 'https://github.com/shadcn/ui',
     docs: 'https://ui.shadcn.com',
   },
-};
+  waitDatabase: 2000,
+} as const;

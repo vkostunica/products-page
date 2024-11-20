@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { Product } from '@/types/product';
+import { Product } from '@/types/models';
 import ProductCard from '@/components/product-card';
 import Search from '@/components/search';
 
