@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
 import { cn } from '@/lib/utils';
 import { Toaster } from '@/components/ui/toaster';
+import Header from '@/components/header';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { ThemeProvider } from '@/components/theme-provider';
 
@@ -40,17 +41,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <head />
         <body
           className={cn(
-            'min-h-screen min-w-80 bg-background sm:bg-card lg:bg-background font-sans antialiased',
+            'min-h-screen min-w-80 bg-background font-sans antialiased',
             fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
-              {children}
+              <Header />
+              <main className="container px-4 py-6">{children}</main>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
-
           <Toaster />
         </body>
       </html>
