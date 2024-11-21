@@ -11,15 +11,15 @@ export interface Props {
 }
 
 const ProductCard: FC<Props> = ({ product }) => {
-  const { id, name, image, description, color, price } = product;
+  const { id, name, image, description, tags, price } = product;
 
   return (
     <Card key={id} className="overflow-hidden">
       <Image
         src={image}
         alt={name}
-        width={400}
-        height={300}
+        width={1080}
+        height={720}
         className="h-48 w-full object-cover"
       />
       <CardContent className="p-4">
@@ -29,8 +29,11 @@ const ProductCard: FC<Props> = ({ product }) => {
         </div>
         <p className="text-sm text-muted-foreground mb-4">{description}</p>
         <div className="flex gap-2">
-          <Badge variant="secondary">Tech</Badge>
-          <Badge variant="secondary">{color}</Badge>
+          {tags.map((tag, index) => (
+            <Badge key={index} variant="secondary">
+              {tag}
+            </Badge>
+          ))}
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">

@@ -10,7 +10,7 @@ export const products = [
     description:
       'A sleek, ergonomic PlayStation controller with responsive buttons and adaptive triggers.',
     image: `${IMAGES}ps5-controller.png`,
-    color: 'Black',
+    tags: ['Tech', 'Black'],
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const products = [
     description:
       'A compact and durable GameCube console with a unique, cube-shaped design.',
     image: `${IMAGES}gamecube.png`,
-    color: 'Grey',
+    tags: ['Tech', 'Grey'],
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const products = [
     description:
       'A powerful, portable Steam Deck console with a vibrant touchscreen and ergonomic controls.',
     image: `${IMAGES}steam-deck.png`,
-    color: 'Black',
+    tags: ['Tech', 'Black'],
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const products = [
     description:
       'A classic Sega handheld console with a vibrant screen and a library of iconic games.',
     image: `${IMAGES}sega-handheld.png`,
-    color: 'Black',
+    tags: ['Tech', 'Black'],
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ export const products = [
     description:
       'A charming, pocket-sized Playdate console with a unique crank controller.',
     image: `${IMAGES}playdate.png`,
-    color: 'Yellow',
+    tags: ['Tech', 'Yellow'],
   },
   {
     id: 6,
@@ -55,6 +55,6 @@ export const products = [
     description:
       'Console with a vibrant display, detachable Joy-Con controllers.',
     image: `${IMAGES}nintendo.png`,
-    color: 'Black',
+    tags: ['Tech', 'Black'],
   },
 ];
