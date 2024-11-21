@@ -23,7 +23,9 @@
     --primary-foreground: theme('colors.slate.50');
 
     --secondary: theme('colors.slate.100');
-    --secondary-foreground: theme('colors.amber.500');
+    --secondary-foreground: theme('colors.gray.800');
+
+    --tertiary-foreground: theme('colors.amber.500');
 
     --accent: theme('colors.slate.100');
     --accent-foreground: theme('colors.gray.800');
@@ -59,8 +61,10 @@
     --primary-foreground: theme('colors.gray.800');
 
     --secondary: theme('colors.gray.800');
+    --secondary-foreground: theme('colors.slate.50');
+
     /* closest to #FCC85D from Figma */
-    --secondary-foreground: theme('colors.amber.300');
+    --tertiary-foreground: theme('colors.amber.300');
 
     --destructive: theme('colors.red.600');
     --destructive-foreground: theme('colors.slate.50');

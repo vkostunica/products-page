@@ -14,7 +14,7 @@ const ProductListItem: FC<Props> = ({ product }) => {
   const { name, image, description, tags, price } = product;
 
   return (
-    <Card className="grid grid-cols-[1fr,3fr,1fr,auto] items-center gap-16 p-4 rounded-lg">
+    <Card className="grid grid-cols-[14rem,3fr,1fr,14rem] items-center gap-16 p-4 rounded-lg">
       <div className="flex items-center gap-2">
         <Image
           src={image}
@@ -36,7 +36,7 @@ const ProductListItem: FC<Props> = ({ product }) => {
         ))}
       </div>
 
-      <div className="flex items-center gap-2">
+      <div className="flex justify-end items-center gap-2">
         <div className="text-lg font-bold">${price.toFixed(2)}</div>
         <Button variant="outline">View Details</Button>
       </div>
