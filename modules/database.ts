@@ -4,10 +4,10 @@ import { Product } from '@/types/models';
 import { CONFIG } from '@/config/app';
 import { products } from '@/data/products';
 
-const { waitDatabase } = CONFIG;
+const { WAIT_DATABASE } = CONFIG;
 
 export const searchProducts = async (query = ''): Promise<Product[]> => {
-  await wait(waitDatabase);
+  await wait(WAIT_DATABASE);
 
   if (!query) return products;
 

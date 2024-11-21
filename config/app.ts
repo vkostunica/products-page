@@ -1,18 +1,12 @@
 export const CONFIG = {
-  name: 'Next.js',
-  description:
+  NAME: 'Next.js',
+  DESCRIPTION:
     'Beautifully designed components built with Radix UI and Tailwind CSS.',
-  mainNav: [
-    {
-      title: 'Home',
-      href: '/',
-    },
-  ],
-  links: {
+  LINKS: {
     twitter: 'https://twitter.com/shadcn',
     github: 'https://github.com/shadcn/ui',
     docs: 'https://ui.shadcn.com',
   },
-  waitDatabase: 1000,
-  waitDebounceSearchInput: 300,
+  WAIT_DATABASE: 1000,
+  WAIT_DEBOUNCE_SEARCH_INPUT: 300,
 } as const;

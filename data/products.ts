@@ -1,4 +1,6 @@
-import placeholderImage from '@/assets/images/placeholder.svg';
+import { ROUTES } from '@/constants/routes';
+
+const { IMAGES } = ROUTES.STATIC;
 
 export const products = [
   {
@@ -7,7 +9,7 @@ export const products = [
     price: 70.0,
     description:
       'A sleek, ergonomic PlayStation controller with responsive buttons and adaptive triggers.',
-    image: placeholderImage,
+    image: `${IMAGES}ps5-controller.png`,
     color: 'Black',
   },
   {
@@ -16,7 +18,7 @@ export const products = [
     price: 120.0,
     description:
       'A compact and durable GameCube console with a unique, cube-shaped design.',
-    image: placeholderImage,
+    image: `${IMAGES}gamecube.png`,
     color: 'Grey',
   },
   {
@@ -25,7 +27,7 @@ export const products = [
     price: 350.0,
     description:
       'A powerful, portable Steam Deck console with a vibrant touchscreen and ergonomic controls.',
-    image: placeholderImage,
+    image: `${IMAGES}steam-deck.png`,
     color: 'Black',
   },
   {
@@ -34,7 +36,7 @@ export const products = [
     price: 50.0,
     description:
       'A classic Sega handheld console with a vibrant screen and a library of iconic games.',
-    image: placeholderImage,
+    image: `${IMAGES}sega-handheld.png`,
     color: 'Black',
   },
   {
@@ -43,7 +45,7 @@ export const products = [
     price: 220.0,
     description:
       'A charming, pocket-sized Playdate console with a unique crank controller.',
-    image: placeholderImage,
+    image: `${IMAGES}playdate.png`,
     color: 'Yellow',
   },
   {
@@ -52,7 +54,7 @@ export const products = [
     price: 350.0,
     description:
       'Console with a vibrant display, detachable Joy-Con controllers.',
-    image: placeholderImage,
+    image: `${IMAGES}nintendo.png`,
     color: 'Black',
   },
 ];

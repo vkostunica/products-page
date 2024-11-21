@@ -1,26 +1,26 @@
+'use client';
+
 import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSelectedLayoutSegment } from 'next/navigation';
 import { ShoppingCart } from 'lucide-react';
 
+import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { NAVIGATION } from '@/constants/navigation';
-import placeholderImage from '@/assets/images/placeholder.svg';
-
-// import { ThemeToggle } from '@/components/theme-toggle';
+import logoImage from '@/assets/icons/logo.svg';
 
 const Header: FC = () => {
+  const segment = useSelectedLayoutSegment();
+  const pathSegment = !segment ? '/' : `/${segment}/`;
+
   return (
     <header className="border-b">
       <div className="container flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
-          <Image
-            src={placeholderImage}
-            alt="Level Up Gaming"
-            width={40}
-            height={40}
-            className="rounded"
-          />
+          <Image src={logoImage} alt="Level Up Gaming" className="h-24" />
           <span className="text-xl font-bold">Level Up Gaming</span>
         </div>
         <nav className="flex items-center gap-6">
@@ -30,7 +30,10 @@ const Header: FC = () => {
             return (
               <Link
                 key={title}
-                className="text-sm font-medium hover:underline"
+                className={cn('text-sm font-medium', {
+                  'font-bold text-accent-foreground':
+                    pathSegment === navItem.href,
+                })}
                 href={href}
               >
                 {title}
@@ -42,6 +45,7 @@ const Header: FC = () => {
           <ShoppingCart className="size-4" />
           <span className="sr-only">View Cart</span>
         </Button>
+        <ThemeToggle />
       </div>
     </header>
   );

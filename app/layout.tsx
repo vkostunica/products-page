@@ -12,14 +12,14 @@ import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
   title: {
-    default: CONFIG.name,
-    template: `%s - ${CONFIG.name}`,
+    default: CONFIG.NAME,
+    template: `%s - ${CONFIG.NAME}`,
   },
-  description: CONFIG.description,
+  description: CONFIG.DESCRIPTION,
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: 'favicon.svg',
+    shortcut: 'favicon-96x96.png',
+    apple: 'apple-touch-icon.png',
   },
 };
 

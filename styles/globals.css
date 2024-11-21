@@ -4,70 +4,68 @@
 
 @layer base {
   :root {
-    /* --background: 0 0% 100%; */
-    /* slate.50 */
-    --background: 210, 40%, 98%;
+    --background: theme('colors.slate.50');
+    --foreground: theme('colors.gray.800');
 
-    --foreground: 222.2 47.4% 11.2%;
+    --muted: theme('colors.slate.100');
+    --muted-foreground: theme('colors.gray.500');
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: theme('colors.white');
+    --popover-foreground: theme('colors.gray.800');
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 47.4% 11.2%;
+    --border: theme('colors.slate.200');
+    --input: theme('colors.slate.200');
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --card: theme('colors.white');
+    --card-foreground: theme('colors.gray.800');
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 47.4% 11.2%;
+    --primary: theme('colors.gray.800');
+    --primary-foreground: theme('colors.slate.50');
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --secondary: theme('colors.slate.100');
+    --secondary-foreground: theme('colors.gray.800');
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: theme('colors.slate.100');
+    --accent-foreground: theme('colors.amber.500');
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: theme('colors.red.500');
+    --destructive-foreground: theme('colors.slate.50');
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 210 40% 98%;
-
-    --ring: 215 20.2% 65.1%;
+    --ring: theme('colors.slate.300');
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 224 71% 4%;
-    --foreground: 213 31% 91%;
+    --background: theme('colors.gray.900');
+    --foreground: theme('colors.slate.100');
 
-    --muted: 223 47% 11%;
-    --muted-foreground: 215.4 16.3% 56.9%;
+    --muted: theme('colors.gray.800');
+    --muted-foreground: theme('colors.slate.400');
 
-    --accent: 216 34% 17%;
-    --accent-foreground: 210 40% 98%;
+    --accent: theme('colors.gray.700');
+    /* closest to #FCC85D from Figma */
+    --accent-foreground: theme('colors.amber.300');
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 215 20.2% 65.1%;
+    --popover: theme('colors.gray.900');
+    --popover-foreground: theme('colors.slate.400');
 
-    --border: 216 34% 17%;
-    --input: 216 34% 17%;
+    --border: theme('colors.gray.700');
+    --input: theme('colors.gray.700');
 
-    --card: 224 71% 4%;
-    --card-foreground: 213 31% 91%;
+    --card: theme('colors.gray.900');
+    --card-foreground: theme('colors.slate.100');
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --primary: theme('colors.slate.50');
+    --primary-foreground: theme('colors.gray.800');
 
-    --secondary: 222.2 47.4% 11.2%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: theme('colors.gray.800');
+    --secondary-foreground: theme('colors.slate.50');
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: theme('colors.red.600');
+    --destructive-foreground: theme('colors.slate.50');
 
-    --ring: 216 34% 17%;
+    --ring: theme('colors.gray.700');
 
     --radius: 0.5rem;
   }

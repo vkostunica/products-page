@@ -1,37 +1,34 @@
-export const ROUTES = {
-  home: '/',
-  empty: '#',
-} as const;
+import { ROUTES } from '@/constants/routes';
 
 export const NAVIGATION = [
   {
     title: 'Store',
-    href: ROUTES.empty,
+    href: ROUTES.STORE,
     external: false,
   },
   {
     title: 'Reviews',
-    href: ROUTES.empty,
+    href: ROUTES.EMPTY,
     external: false,
   },
   {
     title: 'Blog',
-    href: ROUTES.empty,
+    href: ROUTES.EMPTY,
     external: false,
   },
   {
     title: 'Media',
-    href: ROUTES.empty,
+    href: ROUTES.EMPTY,
     external: false,
   },
   {
     title: 'Locations',
-    href: ROUTES.empty,
+    href: ROUTES.EMPTY,
     external: false,
   },
   {
     title: 'Contact',
-    href: ROUTES.empty,
+    href: ROUTES.EMPTY,
     external: false,
   },
 ] as const;

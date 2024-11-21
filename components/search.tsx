@@ -9,7 +9,7 @@ import { CONFIG } from '@/config/app';
 import { Input } from '@/components/ui/input';
 import { Toggle } from '@/components/ui/toggle';
 
-const { waitDebounceSearchInput } = CONFIG;
+const { WAIT_DEBOUNCE_SEARCH_INPUT } = CONFIG;
 
 const queryParam = 'query' as const;
 
@@ -33,7 +33,7 @@ const Search: FC = () => {
 
   const debouncedHandleSearch = useDebouncedCallback(
     handleSearch,
-    waitDebounceSearchInput
+    WAIT_DEBOUNCE_SEARCH_INPUT
   );
 
   const initialTerm = searchParams.get(queryParam)?.toString();
