@@ -14,22 +14,21 @@ const ProductListItem: FC<Props> = ({ product }) => {
   const { name, image, description, tags, price } = product;
 
   return (
-    <Card className="grid grid-cols-[50px,1fr,3fr,1fr,auto,auto] items-center gap-4 p-4 rounded-lg">
-      <Image
-        src={image}
-        alt={name}
-        width={50}
-        height={50}
-        className="rounded-full"
-      />
+    <Card className="grid grid-cols-[1fr,3fr,1fr,auto] items-center gap-16 p-4 rounded-lg">
+      <div className="flex items-center gap-2">
+        <Image
+          src={image}
+          alt={name}
+          width={50}
+          height={50}
+          className="rounded-full"
+        />
+        <h2 className="text-lg font-semibold whitespace-nowrap">{name}</h2>
+      </div>
 
-      <h2 className="text-lg font-semibold whitespace-nowrap">{name}</h2>
+      <p className="text-sm text-muted-foreground truncate">{description}</p>
 
-      <p className="text-sm text-muted-foreground line-clamp-1">
-        {description}
-      </p>
-
-      <div className="flex gap-2">
+      <div className="flex items-center gap-2">
         {tags.map((tag, index) => (
           <Badge key={index} variant="secondary">
             {tag}
@@ -37,9 +36,10 @@ const ProductListItem: FC<Props> = ({ product }) => {
         ))}
       </div>
 
-      <div className="text-lg font-bold">${price.toFixed(2)}</div>
-
-      <Button variant="outline">View Details</Button>
+      <div className="flex items-center gap-2">
+        <div className="text-lg font-bold">${price.toFixed(2)}</div>
+        <Button variant="outline">View Details</Button>
+      </div>
     </Card>
   );
 };
