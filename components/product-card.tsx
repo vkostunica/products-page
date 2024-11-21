@@ -11,10 +11,10 @@ export interface Props {
 }
 
 const ProductCard: FC<Props> = ({ product }) => {
-  const { id, name, image, description, tags, price } = product;
+  const { name, image, description, tags, price } = product;
 
   return (
-    <Card key={id} className="overflow-hidden">
+    <Card className="overflow-hidden">
       <Image
         src={image}
         alt={name}

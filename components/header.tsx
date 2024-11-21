@@ -19,10 +19,7 @@ const Header: FC = () => {
   return (
     <header className="border-b">
       <div className="container flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <Image src={logoImage} alt="Level Up Gaming" className="h-24" />
-          <span className="text-xl font-bold">Level Up Gaming</span>
-        </div>
+        <Image src={logoImage} alt="Level Up Gaming" className="h-24" />
         <nav className="flex items-center gap-6">
           {NAVIGATION.map((navItem) => {
             const { href, title } = navItem;
@@ -31,7 +28,7 @@ const Header: FC = () => {
               <Link
                 key={title}
                 className={cn('text-sm font-medium', {
-                  'font-bold text-accent-foreground':
+                  'font-bold text-secondary-foreground':
                     pathSegment === navItem.href,
                 })}
                 href={href}
