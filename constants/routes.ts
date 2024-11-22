@@ -1,5 +1,6 @@
 export const ROUTES = {
-  STORE: '/',
+  HOME: '/',
+  STORE: '/store/',
   EMPTY: '#',
   STATIC: {
     IMAGES: '/assets/images/',

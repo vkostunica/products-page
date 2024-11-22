@@ -45,7 +45,8 @@ const Search: FC = () => {
   };
 
   const initialQuery = searchParams.get(QUERY.NAME)?.toString();
-  const initialDisplay = searchParams.get(DISPLAY.NAME)?.toString();
+  const initialDisplay =
+    searchParams.get(DISPLAY.NAME)?.toString() ?? DISPLAY.DEFAULT_VALUE;
 
   return (
     <div className="flex items-center justify-between gap-7 mb-6">

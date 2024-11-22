@@ -10,7 +10,10 @@ import { Button } from '@/components/ui/button';
 import { Icons } from '@/components/icons';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { NAVIGATION } from '@/constants/navigation';
+import { ROUTES } from '@/constants/routes';
 import starImage from '@/assets/icons/star.svg';
+
+const { HOME } = ROUTES;
 
 const Header: FC = () => {
   const segment = useSelectedLayoutSegment();
@@ -19,10 +22,10 @@ const Header: FC = () => {
   return (
     <header className="border-b">
       <div className="container flex h-16 items-center justify-between px-4">
-        <div className="flex items-center gap-2 shrink-0">
+        <Link href={HOME} className="flex items-center gap-2 shrink-0">
           <Image src={starImage} alt="Star logo" className="h-16" />
           <Icons.levelUpGaming className="h-16" />
-        </div>
+        </Link>
 
         <nav className="flex items-center gap-6">
           {NAVIGATION.map((navItem) => {

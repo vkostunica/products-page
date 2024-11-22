@@ -1,31 +1,23 @@
-import { FC, Suspense } from 'react';
+import { FC } from 'react';
+import Link from 'next/link';
 
-import { SearchParams } from '@/types/url';
-import ProductList from '@/components/product-list';
-import ProductListSkeleton from '@/components/product-list-skeleton';
-import Search from '@/components/search';
-import { QUERY_PARAMS } from '@/constants/url';
+import { Button } from '@/components/ui/button';
+import { ROUTES } from '@/constants/routes';
 
-export interface Props {
-  searchParams?: Promise<SearchParams>;
-}
+const { STORE } = ROUTES;
 
-const { QUERY, DISPLAY } = QUERY_PARAMS;
-
-const IndexPage: FC<Props> = async (props) => {
-  const searchParams = await props.searchParams;
-  const { query = QUERY.DEFAULT_VALUE, display = DISPLAY.DEFAULT_VALUE } =
-    searchParams ?? {};
-
+const IndexPage: FC = () => {
   return (
     <>
-      <Search />
-      <Suspense
-        key={query}
-        fallback={<ProductListSkeleton display={display} />}
-      >
-        <ProductList query={query} display={display} />
-      </Suspense>
+      <h1 className="text-3xl font-bold md:text-4xl mb-8">Home page</h1>
+      <p className="max-w-[700px] text-lg flex items-center">
+        <span>Go to the</span>
+        <Link href={STORE}>
+          <Button variant="link" className="text-lg px-2">
+            Store page
+          </Button>
+        </Link>
+      </p>
     </>
   );
 };
