@@ -53,11 +53,11 @@ const Search: FC = () => {
         <Input
           onChange={debouncedHandleSearch}
           defaultValue={initialQuery}
-          className="pl-8 h-12"
+          className="pl-10 h-12"
           placeholder="Search..."
           type="search"
         />
-        <SearchIcon className=" absolute left-2.5 top-4 size-4 text-muted-foreground" />
+        <SearchIcon className=" absolute left-4 top-4 size-4 text-muted-foreground" />
       </div>
 
       <ToggleGroup

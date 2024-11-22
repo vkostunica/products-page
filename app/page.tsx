@@ -20,7 +20,10 @@ const IndexPage: FC<Props> = async (props) => {
   return (
     <>
       <Search />
-      <Suspense key={query} fallback={<ProductListSkeleton />}>
+      <Suspense
+        key={query}
+        fallback={<ProductListSkeleton display={display} />}
+      >
         <ProductList query={query} display={display} />
       </Suspense>
     </>

@@ -14,22 +14,31 @@ const ProductList: FC<Props> = async ({ query, display }) => {
   const isGrid = display === 'grid';
   const isList = display === 'list';
 
+  const hasProducts = products.length > 0;
+
   return (
     <>
-      <h2 className="text-2xl font-bold mb-6">All Products</h2>
-      <ul
-        className={cn({
-          'grid gap-6 md:grid-cols-2 lg:grid-cols-3': isGrid,
-          'flex flex-col': isList,
-        })}
-      >
-        {products.map((product) => (
-          <li key={product.id}>
-            {isGrid && <ProductCard product={product} />}
-            {isList && <ProductListItem product={product} />}
-          </li>
-        ))}
-      </ul>
+      {hasProducts ? (
+        <>
+          <h2 className="text-2xl font-bold mb-6">All Products</h2>
+
+          <ul
+            className={cn({
+              'grid gap-6 md:grid-cols-2 lg:grid-cols-3': isGrid,
+              'flex flex-col gap-4': isList,
+            })}
+          >
+            {products.map((product) => (
+              <li key={product.id}>
+                {isGrid && <ProductCard product={product} />}
+                {isList && <ProductListItem product={product} />}
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : (
+        <h2 className="text-2xl font-bold mb-6">No products available</h2>
+      )}
     </>
   );
 };

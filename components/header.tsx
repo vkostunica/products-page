@@ -7,9 +7,10 @@ import { useSelectedLayoutSegment } from 'next/navigation';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { Icons } from '@/components/icons';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { NAVIGATION } from '@/constants/navigation';
-import logoImage from '@/assets/icons/logo.svg';
+import starImage from '@/assets/icons/star.svg';
 
 const Header: FC = () => {
   const segment = useSelectedLayoutSegment();
@@ -18,7 +19,10 @@ const Header: FC = () => {
   return (
     <header className="border-b">
       <div className="container flex h-16 items-center justify-between px-4">
-        <Image src={logoImage} alt="Level Up Gaming" className="h-24" />
+        <div className="flex items-center gap-2 shrink-0">
+          <Image src={starImage} alt="Star logo" className="h-16" />
+          <Icons.levelUpGaming className="h-16" />
+        </div>
 
         <nav className="flex items-center gap-6">
           {NAVIGATION.map((navItem) => {
@@ -27,7 +31,7 @@ const Header: FC = () => {
             return (
               <Link
                 key={title}
-                className={cn('text-sm font-medium text-muted-foreground', {
+                className={cn('text-sm font-medium', {
                   'font-bold text-tertiary-foreground':
                     pathSegment === navItem.href,
                 })}
@@ -40,7 +44,9 @@ const Header: FC = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button variant="outline">View Cart</Button>
+          <Button variant="outline" size="lg" className="px-8">
+            View Cart
+          </Button>
           <ThemeToggle />
         </div>
       </div>
