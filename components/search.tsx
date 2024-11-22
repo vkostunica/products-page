@@ -48,27 +48,39 @@ const Search: FC = () => {
   const initialDisplay = searchParams.get(DISPLAY.NAME)?.toString();
 
   return (
-    <div className="flex items-center justify-between mb-6">
-      <div className="relative w-full max-w-sm">
+    <div className="flex items-center justify-between gap-7 mb-6">
+      <div className="relative w-full">
         <Input
           onChange={debouncedHandleSearch}
           defaultValue={initialQuery}
-          className="pl-8"
+          className="pl-8 h-12"
           placeholder="Search..."
           type="search"
         />
-        <SearchIcon className=" absolute left-2.5 top-2.5 size-4 text-muted-foreground" />
+        <SearchIcon className=" absolute left-2.5 top-4 size-4 text-muted-foreground" />
       </div>
+
       <ToggleGroup
         type="single"
         defaultValue={initialDisplay}
         onValueChange={handleDisplay}
+        className="border border-border rounded-lg p-1.5 gap-2"
       >
-        <ToggleGroupItem value="grid" aria-label="Toggle grid">
-          <LayoutGrid className="size-4" />
+        <ToggleGroupItem
+          value="grid"
+          aria-label="Toggle grid"
+          size="sm"
+          className="px-4"
+        >
+          <LayoutGrid fill="currentColor" /> Grid
         </ToggleGroupItem>
-        <ToggleGroupItem value="list" aria-label="Toggle list">
-          <List className="size-4" />
+        <ToggleGroupItem
+          value="list"
+          aria-label="Toggle list"
+          size="sm"
+          className="px-4"
+        >
+          <List /> List
         </ToggleGroupItem>
       </ToggleGroup>
     </div>

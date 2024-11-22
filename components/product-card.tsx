@@ -14,20 +14,22 @@ const ProductCard: FC<Props> = ({ product }) => {
   const { name, image, description, tags, price } = product;
 
   return (
-    <Card className="overflow-hidden">
+    <Card className="overflow-hidden min-h-full flex flex-col">
       <Image
         src={image}
         alt={name}
         width={1080}
         height={720}
-        className="h-48 w-full object-cover"
+        className="h-36 w-full object-cover"
       />
-      <CardContent className="p-4">
-        <div className="flex items-center justify-between mb-2">
-          <h3 className="font-semibold">{name}</h3>
-          <span className="font-bold">${price.toFixed(2)}</span>
+      <CardContent className="p-4 flex-1">
+        <div className="flex flex-col items-start mb-2">
+          <span>${price.toFixed(2)}</span>
+          <h3 className="font-medium text-lg line-clamp-1">{name}</h3>
         </div>
-        <p className="text-sm text-muted-foreground mb-4">{description}</p>
+        <p className="text-xs text-muted-foreground mb-4 line-clamp-2">
+          {description}
+        </p>
         <div className="flex gap-2">
           {tags.map((tag, index) => (
             <Badge key={index} variant="secondary">
