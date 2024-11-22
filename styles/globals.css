@@ -40,13 +40,13 @@
 
   .dark {
     --background: theme('colors.gray.900');
-    --foreground: theme('colors.slate.100');
+    --foreground: theme('colors.white');
 
     --muted: theme('colors.gray.800');
     --muted-foreground: theme('colors.slate.400');
 
     --accent: theme('colors.gray.700');
-    --accent-foreground: theme('colors.slate.50');
+    --accent-foreground: theme('colors.white');
 
     --popover: theme('colors.gray.900');
     --popover-foreground: theme('colors.slate.400');
@@ -55,19 +55,19 @@
     --input: theme('colors.gray.700');
 
     --card: theme('colors.gray.900');
-    --card-foreground: theme('colors.slate.100');
+    --card-foreground: theme('colors.white');
 
-    --primary: theme('colors.slate.50');
+    --primary: theme('colors.white');
     --primary-foreground: theme('colors.gray.800');
 
     --secondary: theme('colors.gray.800');
-    --secondary-foreground: theme('colors.slate.50');
+    --secondary-foreground: theme('colors.white');
 
     /* closest to #FCC85D from Figma */
     --tertiary-foreground: theme('colors.amber.300');
 
     --destructive: theme('colors.red.600');
-    --destructive-foreground: theme('colors.slate.50');
+    --destructive-foreground: theme('colors.white');
 
     --ring: theme('colors.gray.700');
 

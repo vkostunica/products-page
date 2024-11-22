@@ -31,8 +31,8 @@ const Header: FC = () => {
             return (
               <Link
                 key={title}
-                className={cn('text-sm font-medium', {
-                  'font-bold text-tertiary-foreground':
+                className={cn('text-lg text-muted-foreground', {
+                  'font-medium text-tertiary-foreground':
                     pathSegment === navItem.href,
                 })}
                 href={href}
