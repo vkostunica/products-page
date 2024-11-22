@@ -6,6 +6,8 @@
     "dev": "NODE_NO_WARNINGS=1 next dev",
     "build": "next build",
     "start": "next start",
+    "cp": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/",
+    "standalone": "node .next/standalone/server.js",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
