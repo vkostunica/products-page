@@ -21,7 +21,7 @@ const ProductListItem: FC<Props> = ({ product }) => {
           alt={name}
           width={50}
           height={50}
-          className="rounded-full"
+          className="rounded-md size-7 object-cover"
         />
         <h2 className="text-lg font-semibold whitespace-nowrap">{name}</h2>
       </div>
@@ -38,7 +38,9 @@ const ProductListItem: FC<Props> = ({ product }) => {
 
       <div className="flex justify-end items-center gap-2">
         <div className="text-lg font-bold">${price.toFixed(2)}</div>
-        <Button variant="outline">View Details</Button>
+        <Button variant="outline" size="sm">
+          View Details
+        </Button>
       </div>
     </Card>
   );

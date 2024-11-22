@@ -20,7 +20,7 @@ const Header: FC = () => {
   const pathSegment = !segment ? '/' : `/${segment}/`;
 
   return (
-    <header className="border-b">
+    <header className="border-b bg-popover">
       <div className="container flex h-16 items-center justify-between px-4">
         <Link href={HOME} className="flex items-center gap-2 shrink-0">
           <Image src={starImage} alt="Star logo" className="h-16" />

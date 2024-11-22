@@ -39,32 +39,31 @@
   }
 
   .dark {
-    --background: theme('colors.gray.900');
+    --background: theme('colors.neutral.900'); /* closest to #111111 */
     --foreground: theme('colors.white');
 
     --muted: theme('colors.gray.800');
-    --muted-foreground: theme('colors.slate.400');
+    --muted-foreground: theme('colors.neutral.400'); /* closest to #A1A1A1 */
 
     --accent: theme('colors.gray.700');
     --accent-foreground: theme('colors.white');
 
-    --popover: theme('colors.gray.900');
+    --popover: theme('colors.zinc.900'); /* closest to #191919 */
     --popover-foreground: theme('colors.slate.400');
 
-    --border: theme('colors.gray.700');
-    --input: theme('colors.gray.700');
+    --border: theme('colors.neutral.700'); /* closest to #363636 */
+    --input: theme('colors.neutral.700'); /* closest to #363636 */
 
-    --card: theme('colors.gray.900');
+    --card: theme('colors.zinc.900'); /* closest to #191919 */
     --card-foreground: theme('colors.white');
 
     --primary: theme('colors.white');
-    --primary-foreground: theme('colors.gray.800');
+    --primary-foreground: theme('colors.black'); /* #000000 */
 
-    --secondary: theme('colors.gray.800');
+    --secondary: theme('colors.neutral.800'); /* closest to #222222 */
     --secondary-foreground: theme('colors.white');
 
-    /* closest to #FCC85D from Figma */
-    --tertiary-foreground: theme('colors.amber.300');
+    --tertiary-foreground: theme('colors.amber.300'); /* closest to #FCC85D */
 
     --destructive: theme('colors.red.600');
     --destructive-foreground: theme('colors.white');
