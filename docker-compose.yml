@@ -3,8 +3,11 @@ version: '3.8'
 services:
   products-page:
     container_name: products-page
-    image: nemanjamitic/products-page:latest
     restart: unless-stopped
+    image: nemanjamitic/products-page:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     environment:
       - PORT=3006
     networks:
