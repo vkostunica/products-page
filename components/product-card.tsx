@@ -23,7 +23,7 @@ const ProductCard: FC<Props> = ({ product }) => {
         className="h-36 w-full object-cover"
       />
       <CardContent className="p-4 flex-1">
-        <div className="flex flex-col items-start mb-2">
+        <div className="flex flex-col items-start mb-1">
           <span>${price.toFixed(2)}</span>
           <h3 className="font-medium text-lg line-clamp-1">{name}</h3>
         </div>
