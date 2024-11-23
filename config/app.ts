@@ -9,4 +9,5 @@ export const CONFIG = {
   },
   WAIT_DATABASE: 1000,
   WAIT_DEBOUNCE_SEARCH_INPUT: 300,
+  TRIGGER_ERROR_SEARCH_QUERY: 'db-error',
 } as const;
