@@ -35,7 +35,7 @@
 
     --ring: theme('colors.slate.300');
 
-    --radius: 0.5rem;
+    --radius: 0.75rem; /* 12px */
   }
 
   .dark {
@@ -70,7 +70,12 @@
 
     --ring: theme('colors.gray.700');
 
-    --radius: 0.5rem;
+    /* 
+    lg: 12px,
+    md: 12px - 4px, // button
+    sm: 12px - 6px', 
+    */
+    --radius: 0.75rem; /* 12px */
   }
 }
 
