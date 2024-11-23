@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   description: CONFIG.DESCRIPTION,
   icons: {
-    icon: 'favicon.svg',
+    icon: 'favicon.ico',
     shortcut: 'favicon-96x96.png',
     apple: 'apple-touch-icon.png',
   },
@@ -45,7 +45,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider
+            defaultTheme="dark"
+            enableSystem={false}
+            attribute="class"
+          >
             <div className="relative flex min-h-screen flex-col">
               <Header />
               <main className="grow flex flex-col container lg:max-w-screen-lg px-4 py-6">
