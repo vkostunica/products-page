@@ -6,6 +6,8 @@ import ProductListSkeleton from '@/components/product-list-skeleton';
 import Search from '@/components/search';
 import { QUERY_PARAMS } from '@/constants/url';
 
+export const runtime = 'edge';
+
 export interface Props {
   searchParams?: Promise<SearchParams>;
 }
