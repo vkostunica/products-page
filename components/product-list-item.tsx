@@ -14,7 +14,7 @@ const ProductListItem: FC<Props> = ({ product }) => {
   const { name, image, description, tags, price } = product;
 
   return (
-    <Card className="grid grid-cols-[14rem,3fr,1fr,14rem] items-center gap-16 p-4 rounded-lg">
+    <Card className="grid grid-cols-[12rem,auto] md:grid-cols-[12rem,auto,12rem] lg:grid-cols-[14rem,3fr,1fr,14rem] gap-2 md:gap-16 items-center p-3 rounded-lg">
       <div className="flex items-center gap-2">
         <Image
           src={image}
@@ -23,12 +23,16 @@ const ProductListItem: FC<Props> = ({ product }) => {
           height={50}
           className="rounded-md size-7 object-cover"
         />
-        <h2 className="text-lg font-semibold whitespace-nowrap">{name}</h2>
+        <h2 className="text-lg font-semibold whitespace-nowrap truncate">
+          {name}
+        </h2>
       </div>
 
-      <p className="text-sm text-muted-foreground truncate">{description}</p>
+      <p className="text-sm text-muted-foreground truncate hidden md:block ">
+        {description}
+      </p>
 
-      <div className="flex items-center gap-2">
+      <div className="hidden lg:flex items-center gap-2">
         {tags.map((tag, index) => (
           <Badge key={index} variant="secondary">
             {tag}
@@ -37,7 +41,9 @@ const ProductListItem: FC<Props> = ({ product }) => {
       </div>
 
       <div className="flex justify-end items-center gap-2">
-        <div className="text-lg font-bold">${price.toFixed(2)}</div>
+        <div className="text-lg font-bold hidden xs:block">
+          ${price.toFixed(2)}
+        </div>
         <Button variant="outline" size="sm">
           View Details
         </Button>

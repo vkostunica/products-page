@@ -24,7 +24,7 @@ const ProductList: FC<Props> = async ({ query, display }) => {
 
           <ul
             className={cn({
-              'grid gap-6 md:grid-cols-2 lg:grid-cols-3': isGrid,
+              'grid gap-7 md:grid-cols-2 lg:grid-cols-3': isGrid,
               'flex flex-col gap-4': isList,
             })}
           >

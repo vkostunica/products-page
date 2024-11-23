@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
@@ -8,6 +9,10 @@ module.exports = {
     container: {
       center: true,
       padding: '2rem',
+    },
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {

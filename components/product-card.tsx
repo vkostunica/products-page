@@ -39,7 +39,7 @@ const ProductCard: FC<Props> = ({ product }) => {
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full" variant="outline">
+        <Button className="w-full" variant="outline" size="lg">
           View Details
         </Button>
       </CardFooter>
