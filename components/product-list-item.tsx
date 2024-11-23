@@ -28,7 +28,7 @@ const ProductListItem: FC<Props> = ({ product }) => {
         </h2>
       </div>
 
-      <p className="text-sm text-muted-foreground truncate hidden md:block ">
+      <p className="text-sm text-muted-foreground truncate hidden md:block">
         {description}
       </p>
 
