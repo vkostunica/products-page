@@ -8,7 +8,7 @@
     "start": "next start",
     "cp": "cp -r public .next/standalone/ && cp -r .next/static .next/standalone/.next/",
     "standalone": "node .next/standalone/server.js",
-    "clean": "rm -rf node_modules yarn.lock",
+    "clean": "rm -rf node_modules package-lock.json .fleek .vercel",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
@@ -20,6 +20,7 @@
     "docker:build:push:x86": "docker buildx build -f ./Dockerfile -t nemanjamitic/products-page --platform linux/amd64 --push ."
   },
   "dependencies": {
+    "@fleek-platform/next": "^2.2.1",
     "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-label": "^2.1.0",
