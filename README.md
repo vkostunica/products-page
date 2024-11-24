@@ -2,6 +2,8 @@
 
 ## Fleek deployment
 
+Tutorial: https://fleek.xyz/blog/announcements/nextjs-support-release/
+
 ```bash
 # clone repo
 git clone git@github.com:vkostunica/products-page.git
