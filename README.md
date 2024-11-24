@@ -22,7 +22,7 @@ npm install
 # build app
 npx fleek-next build
 
-# create function
+# create function and select project
 fleek functions create --name products-page-f1
 
 # deploy and select products-page-f1 function
