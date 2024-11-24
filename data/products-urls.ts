@@ -1,6 +1,10 @@
-import { ROUTES } from '@/constants/routes';
 
-const { IMAGES } = ROUTES.STATIC;
+const nintendoImage = 'https://i.postimg.cc/2jXNR6mZ/nintendo.png';
+const steamdeckImage = 'https://i.postimg.cc/7YG8xkYQ/steam-deck.png';
+const ps5Image = 'https://i.postimg.cc/50sdt9CD/ps5-controller.png';
+const segaImage = 'https://i.postimg.cc/br57Q6LT/sega-handheld.png';
+const gamecubeImage = 'https://i.postimg.cc/fLzQZSJx/gamecube.png';
+const playdateImage = 'https://i.postimg.cc/RhqrJr1h/playdate.png';
 
 export const products = [
   {
@@ -9,7 +13,7 @@ export const products = [
     price: 70.0,
     description:
       'A sleek, ergonomic PlayStation controller with responsive buttons and adaptive triggers.',
-    image: `${IMAGES}ps5-controller.png`,
+    image: ps5Image,
     tags: ['Tech', 'Black'],
   },
   {
@@ -18,7 +22,7 @@ export const products = [
     price: 120.0,
     description:
       'A compact and durable GameCube console with a unique, cube-shaped design.',
-    image: `${IMAGES}gamecube.png`,
+    image: gamecubeImage,
     tags: ['Tech', 'Grey'],
   },
   {
@@ -27,7 +31,7 @@ export const products = [
     price: 350.0,
     description:
       'A powerful, portable Steam Deck console with a vibrant touchscreen and ergonomic controls.',
-    image: `${IMAGES}steam-deck.png`,
+    image: steamdeckImage,
     tags: ['Tech', 'Black'],
   },
   {
@@ -36,7 +40,7 @@ export const products = [
     price: 50.0,
     description:
       'A classic Sega handheld console with a vibrant screen and a library of iconic games.',
-    image: `${IMAGES}sega-handheld.png`,
+    image: segaImage,
     tags: ['Tech', 'Black'],
   },
   {
@@ -45,7 +49,7 @@ export const products = [
     price: 220.0,
     description:
       'A charming, pocket-sized Playdate console with a unique crank controller.',
-    image: `${IMAGES}playdate.png`,
+    image: playdateImage,
     tags: ['Tech', 'Yellow'],
   },
   {
@@ -54,7 +58,7 @@ export const products = [
     price: 350.0,
     description:
       'Console with a vibrant display, detachable Joy-Con controllers.',
-    image: `${IMAGES}nintendo.png`,
+    image: nintendoImage,
     tags: ['Tech', 'Black'],
   },
 ];
